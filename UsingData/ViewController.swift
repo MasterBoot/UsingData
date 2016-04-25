@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         let age  = dateVar[1].valueForKey("age");
         print("\(name)");
         print("\(age)");
+        //prin("运行到这里");
 }
 
     override func didReceiveMemoryWarning() {
