@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var dateVar:Array<AnyObject>=[]
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("11111");
         let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let row:AnyObject = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context);
         row.setValue("shujuku1", forKey: "name");
@@ -37,9 +38,11 @@ class ViewController: UIViewController {
         }
         let name = dateVar[1].valueForKey("name");
         let age  = dateVar[1].valueForKey("age");
-        print("\(name)");
+        print("\(name?.name)");
         print("\(age)");
-        //prin("运行到这里");
+        //var response:String="";
+        //var dict = response.responseObject as Dictionary<String,AnyObject>;
+        //print("运行到这里");
 }
 
     override func didReceiveMemoryWarning() {
